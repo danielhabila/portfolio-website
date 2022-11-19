@@ -1,4 +1,23 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+body {
+background-color: #18181B;
+color: #F7F7DF;
+/* margin: 0 15px; */
 }
 
+@media (min-width: 768px) {
+    body {
+        margin-left: 5rem/* 80px */;
+        margin-right: 5rem/* 80px */;
+    }
+}
+
+ @media (max-width: 768px) {
+    body {
+    margin-left: 2.5rem/* 40px */;
+    margin-right: 2.5rem/* 40px */;
+}
+}
