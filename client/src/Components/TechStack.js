@@ -1,5 +1,5 @@
 import React from "react";
-import nine from "../assets/nine.png";
+import myFace from "../assets/myFace.png";
 
 function TechStack() {
   return (

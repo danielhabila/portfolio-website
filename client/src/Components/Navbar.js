@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { Link } from "react-scroll";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 function Navbar() {
@@ -13,7 +13,7 @@ function Navbar() {
 
   return (
     <div className="">
-      <div className="flex justify-between items-center h-24">
+      <div className="flex justify-between items-center h-20">
         <div className="cursor-pointer ring-1 ring-[#252529] w-fit h-11 rounded-full flex items-center p-2 bg-[#252529] border border-[#343438] ">
           <h1
             onClick={() => {
@@ -24,7 +24,7 @@ function Navbar() {
             d/h
           </h1>
         </div>
-        <ul className=" hidden md:flex justify-center items-center space-x-8 w-fit bg-[#252529] h-11 px-7 rounded-[40px] cursor-pointer text-mywhite">
+        <ul className=" hidden md:flex justify-center items-center space-x-14 w-fit bg-[#252529] h-11 px-7 rounded-[40px] cursor-pointer text-mywhite ring-[#343438] ring-1">
           <li
             onClick={() => {
               navigate("/about");

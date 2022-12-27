@@ -10,36 +10,17 @@ import Contact from "./Pages/Contact";
 
 function App() {
   return (
-    <div>
+    <div id="container">
       <Router>
         <Navbar />
-        <Routes>
-          <Route path={"/"} element={<Home />} />
-          <Route
-            path="/about"
-            element={
-              <div>
-                <About />
-              </div>
-            }
-          />
-          <Route
-            path="/projects"
-            element={
-              <div>
-                <Projects />
-              </div>
-            }
-          />
-          <Route
-            path="/contact"
-            element={
-              <div>
-                <Contact />
-              </div>
-            }
-          />
-        </Routes>
+        <div id="main-content">
+          <Routes>
+            <Route path={"/"} element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
         <Footer />
       </Router>
     </div>

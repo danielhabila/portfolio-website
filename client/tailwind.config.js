@@ -13,7 +13,7 @@ module.exports = {
       // @media (min-width: 1280px) { ... }
       "2xl": "1536px",
       // @media (min-width: 1536px) { ... }
-      tall: { raw: "(min-height: 768px)" },
+      tall: { raw: "(max-height: 768px)" },
       // @media (max-height: 768px) { ... }
     },
     extend: {},

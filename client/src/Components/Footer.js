@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 function Footer(props) {
   const navigate = useNavigate();
   return (
-    <footer className="w-full h-28 mt-[100vh]] border-t border-[#52525a] py-5 ">
+    <footer className="w-full h-22 border-t border-[#52525a] py-3 ">
       <div className="">
         <ul className="grid grid-flow-col place-content-center space-x-6 text-mywhite">
           <li
@@ -33,7 +33,7 @@ function Footer(props) {
           </li>
         </ul>
 
-        <p className="grid grid-flow-col place-content-center mt-10 text-[#52525a] text-sm">
+        <p className="grid grid-flow-col place-content-center mt-8 text-[#52525a] text-sm">
           © 2022 Daniel Habila. All rights reserved.
         </p>
       </div>

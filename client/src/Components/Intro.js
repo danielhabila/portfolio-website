@@ -2,14 +2,12 @@ import React from "react";
 
 function Intro() {
   return (
-    <div className="md:w-[70%] lg:w-[60%] space-y-8 mt-10">
+    <div className="grid place-content-center space-y-6 mt-10 h-[50vh]">
       <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl">
-        Software designer, founder, pilot and tech junky.
+        I’m Daniel, front-end developer.
       </h1>
       <p className="text-gray-400 text-greytext leading-7 ">
-        I’m Daniel, a code artist based in Vancouver. I’m the founder and CTO of
-        OkAviator, which is a job board company advertising to Pilots. Lorem,
-        ipsum dolor sit amet consectetur adipisicing elit. Commodi similique
+        I love to build things for the web, and bring my ideas to life.
       </p>
     </div>
   );

@@ -1,44 +1,63 @@
 import React from "react";
-import nine from "../assets/nine.png";
-import Socials from "../Components/Socials";
-import EmailCard from "../Components/EmailCard";
+import myFace from "../assets/myFace.png";
+import jsImg from "../assets/js-logo.png";
+import reactImg from "../assets/react-logo.png";
+import nodeImg from "../assets/node-js.png";
+import tailwindImg from "../assets/tailwind-css.png";
+import mongoImg from "../assets/tailwind-css.png";
 
 function About() {
+  const technologies = [
+    { name: "Javascript (ES6+)", img: jsImg },
+    { name: "React", img: reactImg },
+    { name: "Node", img: nodeImg },
+    { name: "Tailwind CSS", img: tailwindImg },
+    // { name: "MongoDB", img: mongoImg },
+    // { name: "Node", img: reactImg },
+  ];
   return (
-    <div className=" mt-10 md:flex md:gap-x-8">
-      <img
-        src={nine}
-        alt=""
-        className=" h-72 md:h-80 lg:h-96 rounded-2xl order-last mx-auto mb-10 "
-      />
+    <div className=" mt-10 md:flex md:flex-row-reverse md:justify-between md:gap-x-8 mb-10">
+      <div>
+        <img
+          src={myFace}
+          alt=""
+          className=" h-72 md:h-80 lg:h-96 rounded-2xl order-last mx-auto mb-10 "
+        />
+      </div>
 
       <div className="space-y-6 md:w-[50%]">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold ">
+        <h1 className="text-3xl md:text-4xl wwlg:text-5xl font-bold ">
           Welcome to my corner of the internet corner.
         </h1>
         <p className="text-[#A1A1AA]">
-          You'll catch me talking/writing about tech, entrepreneurship, books,
-          and generic life advice that I've found helpful. These days, I spend
-          most of my time coding, flying around Vancouver, reading, or creating
-          fun videos.
+          I’m Daniel, I love building intuitive and visually appealing web
+          applications. I am a self-taught web developer with 1 year+ experience
+          working with technologies such as vanilla JavaScript, React, Node, and
+          Tailwind CSS. I have a background in aerospace engineering, but my
+          true passion lies in technology and programming. In my free time, I
+          enjoy reading, flying and discussing new developments in the tech
+          industry.
         </p>
-        <p className="text-[#A1A1AA] ">
-          I got an undergraduate degree in Aerospace Engineering (which I don't
-          use), and a Commercial Pilot License (Yes! Seriously..) Ohh! I also
-          like making internet friends, so if you're reading this, you can say
-          hi to me on Twitter or the Gram. -Thanks for reading!
-        </p>
+
         <p className="text-[#A1A1AA]">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt suscipit
-          facilis vero ipsam accusamus dolorem rerum, aliquid eius reprehenderit
-          quibusdam libero facere amet, nisi assumenda incidunt error
-          dignissimos dicta recusandae. Lorem ipsum dolor sit, amet consectetur
-          adipisicing elit. Necessitatibus illum voluptatum iusto expedita odit,
-          ducimus, quam accusantium quos ipsa assumenda nulla ex facilis dolorem
-          facere. Incidunt accusamus quaerat dolores ea!
+          Here are the technologies I’ve been working with recently:
         </p>
-        <div>
-          <Socials />
+        {/* Skills */}
+        <div className="grid grid-cols-2 gap-6">
+          {technologies.map((tech) => {
+            return (
+              <div className="flex items-center space-x-4">
+                <div className="p-[0.3rem] bg-[#27272A] w-fit rounded-full border border-[#343438] ">
+                  <img
+                    className="rounded-full ring-0 h-6 w-6"
+                    src={tech.img}
+                    alt=""
+                  />
+                </div>
+                <p>{tech.name}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
@@ -46,35 +65,3 @@ function About() {
 }
 
 export default About;
-
-// import {
-//   GrTwitter,
-//   GrGithub,
-//   GrInstagram,
-//   GrYoutube,
-//   GrMail,
-// } from "react-icons/gr";
-
-// <div className="flex-col space-y-5 my-8 cursor-pointer">
-// <div className="flex items-center space-x-4">
-//   <GrTwitter size={20} color="#A1A1AA" />
-//   <p className="text-[#a1a1aa]">Lorem ipsum dolor</p>
-// </div>
-// <div className="flex items-center space-x-4">
-//   <GrGithub size={20} color="#A1A1AA" />
-//   <p className="text-[#a1a1aa]">Lorem ipsum dolor</p>
-// </div>
-// <div className="flex items-center space-x-4">
-//   <GrInstagram className="mt-[1px]" size={19} color="#A1A1AA" />
-//   <p className="text-[#a1a1aa]">Lorem ipsum dolor</p>
-// </div>
-// <div className="flex items-center space-x-4">
-//   <GrYoutube size={21} color="#A1A1AA" />
-//   <p className="text-[#a1a1aa]">Lorem ipsum dolor</p>
-// </div>
-
-// <div className="flex items-center space-x-4">
-//   <GrMail size={20} color="#A1A1AA" />
-//   <p className="text-[#a1a1aa]">dann.aviates@gmail.com</p>
-// </div>
-// </div>
