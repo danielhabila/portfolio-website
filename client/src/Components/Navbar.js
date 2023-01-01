@@ -1,57 +1,64 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 function Navbar() {
-  const navigate = useNavigate();
   const [nav, setNav] = useState(true);
-
   const handleNav = () => {
     setNav(!nav);
   };
 
   return (
-    <div className="">
-      <div className="flex justify-between items-center h-20">
-        <div className="cursor-pointer ring-1 ring-[#252529] w-fit h-11 rounded-full flex items-center p-2 bg-[#252529] border border-[#343438] ">
-          <h1
-            onClick={() => {
-              navigate("/");
-            }}
+    <div>
+      <div className="px-[0.7rem] md:px-[2.5rem] lg:px-[6rem] flex justify-between items-center h-16 bg-[#18181B] shadow-md fixed top-0 left-0 w-full ">
+        <div className="cursor-pointer ring-1 ring-[#252529] w-fit h-10 rounded-full flex items-center px-2 bg-[#252529] border border-[#343438] ">
+          <Link
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-200}
+            duration={500}
             className="text-mywhite text-2xl w-full font-bold font-mono "
           >
             d/h
-          </h1>
+          </Link>
         </div>
-        <ul className=" hidden md:flex justify-center items-center space-x-14 w-fit bg-[#252529] h-11 px-7 rounded-[40px] cursor-pointer text-mywhite ring-[#343438] ring-1">
-          <li
-            onClick={() => {
-              navigate("/about");
-            }}
-            className="hover:text-gold"
-          >
-            About
-          </li>
-          <li
-            onClick={() => {
-              navigate("/projects");
-            }}
-            className="hover:text-gold"
-          >
-            Projects
-          </li>
-          <li
-            onClick={() => {
-              navigate("/contact");
-            }}
-            className="hover:text-gold"
-          >
-            Contact
-          </li>
-        </ul>
-        <div className="md:hidden" onClick={handleNav}>
-          <Bars3Icon className="w-8 cursor-pointer" />
+        <div>
+          <ul className=" hidden md:flex justify-center items-center space-x-14 w-fit bg-[#252529] h-10 px-7 rounded-[40px] cursor-pointer text-mywhite ring-[#343438] ring-1">
+            <Link
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-200}
+              duration={500}
+              className="block hover:text-gold"
+            >
+              About
+            </Link>
+            <Link
+              to="projects"
+              spy={true}
+              smooth={true}
+              offset={-50}
+              duration={500}
+              className="block hover:text-gold"
+            >
+              Projects
+            </Link>
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+              className="block hover:text-gold"
+            >
+              Contact
+            </Link>
+          </ul>
+          <div className="md:hidden" onClick={handleNav}>
+            <Bars3Icon className="w-8 cursor-pointer" />
+          </div>
         </div>
       </div>
       {/******* Mobile Menu ********/}
@@ -60,7 +67,7 @@ function Navbar() {
         onClick={handleNav}
         className={
           !nav
-            ? "fixed top-0 left-0 w-full h-full bg-[#000000]/40 backdrop-blur ease-in-out "
+            ? "fixed top-0 left-0 w-full h-full bg-[#000]/40 backdrop-blur ease-in-out "
             : ""
         }
       >
@@ -68,7 +75,7 @@ function Navbar() {
           //Mobile navbar
           className={
             !nav
-              ? "fixed mx-auto w-[90%] h-[20%] inset-x-0 top-8 rounded-2xl shadow-xl bg-[#18181B] ease-in duration-1000"
+              ? "fixed mx-auto w-[90%] h-fit py-6 inset-x-0 top-8 rounded-2xl shadow-xl bg-[#18181B] ease-in duration-1000"
               : " hidden"
           }
         >
@@ -76,32 +83,44 @@ function Navbar() {
             onClick={handleNav}
             className="absolute top-2 right-2 w-8 bol cursor-pointer"
           />
-          <div className="flex justify-center place-items-center text-center w-full h-full ">
-            <ul onClick={handleNav} className="space-y-6 text-mywhite">
-              <li
-                onClick={() => {
-                  navigate("/about");
-                }}
+          <div>
+            <ul
+              onClick={handleNav}
+              className="space-y-6 text-mywhite grid grid-cols-1 place-items-center w-full h-full"
+            >
+              <Link
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-200}
+                duration={500}
+                onClick={handleNav}
                 className=" hover:text-gold cursor-pointer"
               >
                 About
-              </li>
-              <li
-                onClick={() => {
-                  navigate("/projects");
-                }}
+              </Link>
+              <Link
+                to="projects"
+                spy={true}
+                smooth={true}
+                offset={-40}
+                duration={500}
+                onClick={handleNav}
                 className="hover:text-gold cursor-pointer"
               >
                 Projects
-              </li>
-              <li
-                onClick={() => {
-                  navigate("/contact");
-                }}
+              </Link>
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+                onClick={handleNav}
                 className="hover:text-gold cursor-pointer"
               >
                 Contact
-              </li>
+              </Link>
             </ul>
           </div>
         </div>

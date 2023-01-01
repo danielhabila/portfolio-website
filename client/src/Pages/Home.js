@@ -1,13 +1,14 @@
 import React from "react";
 import About from "./About";
+import Contact from "./Contact";
 import Projects from "./Projects";
-// import Intro from "../Components/Intro";
 
 function Home() {
   return (
-    <div className="">
+    <div>
       <About />
       <Projects />
+      <Contact />
     </div>
   );
 }

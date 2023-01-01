@@ -7,15 +7,12 @@ function AvatarCard(props) {
   return (
     <div className=" space-y-4 rounded-xl">
       <div className="md:flex">
-        <div className="grid md:w-[50%] gap-3">
-          <h1 className="md:hidden font-bold font-mono text-xl">Q/Diary</h1>
+        <h1 className="md:hidden font-bold font-mono text-2xl">Q/Diary</h1>
+        <div className=" mx-auto w-[80%] md:w-[36%] gap-3">
           <Carousel />
-          <div className="flex items-center">
-            <LinkIcon className="w-4 mr-2" /> <a href="">okaviator.com</a>
-          </div>
         </div>
         <div className=" md:w-[50%] md:pl-6 space-y-6">
-          <h1 className="hidden font-bold md:block font-mono text-xl">
+          <h1 className="hidden font-bold md:block font-mono text-2xl">
             Q/Diary
           </h1>
           <div>
@@ -26,7 +23,7 @@ function AvatarCard(props) {
             </p>
           </div>
           <div className="">
-            <h3>Pending Updates</h3>
+            <h3>Work in Progress</h3>
 
             <p className=" text-greytext">
               that piques your interest, check out the code and contribute if

@@ -1,43 +1,57 @@
 import React from "react";
-import AvatarCard from "../Components/AvatarCard";
-import TechStack from "../Components/TechStack";
+import nodeImg from "../assets/node-js.png";
+import reactImg from "../assets/react-logo.png";
 
-function Projects(props) {
-  const wip = [
-    {
-      name: "Modern Living",
-      img: "",
-      description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic beatae fugit nobis fugiat magnam placeat veniam quas eum delectus consequatur",
-      added: "",
-      toAdd: "",
-      website: "https://okaviator.com",
-    },
-    {
-      name: "Ok Aviator",
-      img: "",
-      description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic beatae fugit nobis fugiat magnam placeat veniam quas eum delectus consequatur",
-      added: "",
-      toAdd: "",
-      website: "https://okaviator.com",
-    },
-    {
-      name: "Q-Diary",
-      img: "",
-      description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic beatae fugit nobis fugiat magnam placeat veniam quas eum delectus consequatur",
-      added: "",
-      toAdd: "",
-      website: "",
-    },
-  ];
+const wips = [
+  {
+    name: "Modern/Living",
+    img: "",
+    description: "This is an e-commerce site inspired by the CB2 website.",
+    website: "https://okaviator.com",
+    shipped: `
+    <ul style="list-style-type: disc">
+      <li>Adding snap scroll to home page</li>
+      <li>User Login and Authentication</li>
+      <li>Adding data and functionality to Dining, Wall Art, Lighting </li>
+    </ul>
+  `,
+    wipList: `
+    <ul style="list-style-type: disc">
+      <li>Adding Stripe payment</li>
+      <li>User Login and Authentication</li>
+      <li>Adding data and functionality to Dining, Wall Art, Lighting </li>
+    </ul>
+  `,
+  },
+  {
+    name: "Ok/Aviator",
+    img: "",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic beatae fugit nobis fugiat magnam placeat veniam quas eum delectus consequatur",
+    shipped: "",
+    wipList: "",
+    website: "https://okaviator.com",
+  },
+  {
+    name: "Q/Diary",
+    img: "",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic beatae fugit nobis fugiat magnam placeat veniam quas eum delectus consequatur",
+    shipped: "",
+    wipList: "",
+    website: "https://qdiary.info",
+  },
+];
 
+function Projects() {
   return (
-    <div className="flex-col justify-center space-y-8 mt-10">
+    <div
+      className="pt-10 pb-20 h-full flex flex-col justify-center space-y-8"
+      id="projects"
+    >
       <div className="md:w-[70%] lg:w-[60%] space-y-6">
-        <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl text-mywhite">
-          Work in Progress
+        <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl ">
+          Projects
         </h1>
         <p className="text-gray-400 text-greytext leading-7 ">
           Here are the projects I am currently working on and constantly
@@ -45,11 +59,55 @@ function Projects(props) {
           past year but these are the ones that I’m focused on at the moment.
         </p>
       </div>
-      {/* <div className="md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 pb-20"> */}
-      <div className="pb-20">
-        <AvatarCard />
-      </div>
-      <div></div>
+
+      {/* Mapping projects */}
+      {wips.map((wip) => {
+        return (
+          <div>
+            <div className="md:flex space-y-6">
+              <h1 className="md:hidden font-bold font-mono text-2xl">
+                <a target="_blank" rel="noreferrer" href={wip.website}>
+                  {wip.name}
+                </a>
+              </h1>
+              <div className=" mx-auto w-[80%] md:w-[36%] gap-3">
+                <div className="carousel w-fit rounded-xl">
+                  <div className="carousel-item w-full">
+                    <img src={nodeImg} className="w-full" />
+                  </div>
+                  <div className="carousel-item w-full">
+                    <img src={reactImg} className="w-full" />
+                  </div>
+                </div>
+              </div>
+              <div className=" md:w-[50%] md:pl-6 space-y-6">
+                <h1 className="hidden font-bold md:block font-mono text-2xl">
+                  {wip.name}
+                </h1>
+
+                <p className=" text-greytext">{wip.description}</p>
+
+                {/* Shipped Features bullet list */}
+                <div>
+                  <h3>Shipped Features</h3>
+                  <div
+                    className="text-greytext ml-4"
+                    dangerouslySetInnerHTML={{ __html: wip.shipped }}
+                  />
+                </div>
+                {/* Work in Progress bullet list */}
+                <div className="">
+                  <h3>Work in Progress</h3>
+                  <div
+                    className="text-greytext ml-4"
+                    dangerouslySetInnerHTML={{ __html: wip.wipList }}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
