@@ -19,13 +19,15 @@ const wips = [
   {
     name: "Modern/Living",
     img: [furniture, wallArt, lights, dining, details, productPage, cart],
-    description: "This is an e-commerce site inspired by the CB2 website.",
-    website: "https://okaviator.com",
+    description:
+      "This is an e-commerce site inspired by cb2.ca. CB2 is an online retailer that sells modern home decor and furniture. I built this site to solidify my understanding of react fundamentals like components, state, and props; how to retrieve and manipulate data from APIs; how to implement common e-commerce features such as product listings, shopping carts, and checkout flows; and how to create a user-friendly and visually appealing sites.      ",
+    website: "https://modernlivin.shop",
     shipped: `
     <ul style="list-style-type: disc">
-      <li>Adding snap scroll to home page</li>
-      <li>User Login and Authentication</li>
-      <li>Adding data and functionality to Dining, Wall Art, Lighting </li>
+      <li>Snap scroll on home page</li>
+      <li>Furniture listing</li>
+      <li>Shopping cart functionality</li>
+      <li>Product details page</li>
     </ul>
   `,
     wipList: `
@@ -40,19 +42,45 @@ const wips = [
     name: "Ok/Aviator",
     img: [jobsPage],
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic beatae fugit nobis fugiat magnam placeat veniam quas eum delectus consequatur",
-    shipped: "",
-    wipList: "",
+      "Ok Aviator is a project i'm building dedicated to helping professionals in the aviation industry find employment opportunities and helping companies in the industry find qualified candidates. I’m building this to make the process of finding the right job or employee easier and more efficient for both job seekers and employers. ",
     website: "https://okaviator.com",
+    shipped: `
+      <ul style="list-style-type: disc">
+        <li>Fetching jobs from an API</li>
+      </ul>
+    `,
+    wipList: `
+      <ul style="list-style-type: disc">
+        <li>Post job functionality</li>
+        <li>Apply for jobs from the site</li>
+        <li>Search bar functionality</li>
+        <li>User Login and Authentication</li>
+        <li>Updating the user interface</li>
+      </ul>
+    `,
   },
   {
     name: "Q/Diary",
     img: [quotePage, crudPage],
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic beatae fugit nobis fugiat magnam placeat veniam quas eum delectus consequatur",
-    shipped: "",
-    wipList: "",
+      "This app allows users to store, update, delete and display their favorite quotes. Additionally, the app includes a convenient randomize button that displays a randomly selected quote from the user's collection and allows the user to share the quote with others. In building this app, I gained experience working with MongoDB backend and implementing CRUD (create, read, update, delete) functionality. I hope you find the app fun as you explore.",
     website: "https://qdiary.info",
+    shipped: `
+    <ul style="list-style-type: disc">
+      <li>Add new quotes to the collection</li>
+      <li>Update existing quotes</li>
+      <li>Delete quotes from the collection </li>
+      <li> Randomly display a quote from the collection</li>
+      
+    </ul>
+  `,
+    wipList: `
+    <ul style="list-style-type: disc">
+      <li>Share quotes with others</li>
+      <li>User Login and Authentication</li>
+      <li>Have your personal collection</li>
+    </ul>
+  `,
   },
 ];
 
@@ -132,7 +160,7 @@ function Projects() {
                 <div className="">
                   <h3>Work in Progress</h3>
                   <div
-                    className="text-greytext ml-4"
+                    className="text-greytext ml-5"
                     dangerouslySetInnerHTML={{ __html: wip.wipList }}
                   />
                 </div>

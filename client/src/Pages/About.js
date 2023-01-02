@@ -22,7 +22,7 @@ function About() {
     { name: "Wordpress", img: wpImg },
   ];
   return (
-    <div className="py-20">
+    <div className="py-20 lg:pt-10 lg:pb-20">
       <div
         className=" h-fit md:h-screen md:flex md:flex-row-reverse md:justify-between md:items-center md:gap-x-8"
         id="about"
@@ -42,21 +42,21 @@ function About() {
           <h1 className="hidden md:block md:font-bold md:text-4xl lg:text-5xl">
             About
           </h1>
-          <h1 className="text-2xl md:text-4xl wwlg:text-5xl font-bold ">
+          <h1 className="text-2xl md:text-3xl font-bold ">
             Welcome to my corner of the internet corner.
           </h1>
           <p className="text-[#A1A1AA]">
             I’m Daniel, I love building intuitive and visually appealing web
             applications. I am a self-taught web developer with 1 year+
-            experience working with technologies such as vanilla JavaScript,
-            React, Node, and Tailwind CSS. I have a background in aerospace
+            experience working with technologies such as JavaScript, React,
+            Node, and Tailwind CSS. I have a background in aerospace
             engineering, but my true passion lies in technology and programming.
-            In my free time, I enjoy reading, flying and discussing new
+            In my free time, I enjoy reading, flying and chatting about new
             developments in the tech industry.
           </p>
 
           <p className="text-[#A1A1AA]">
-            Here are the technologies I’ve been working with recently:
+            Here are the technologies I’ve been working with:
           </p>
           {/* Skills */}
           <div className="grid grid-cols-2 gap-6">
@@ -75,8 +75,8 @@ function About() {
               );
             })}
           </div>
-
-          <a
+          {/* Download CV */}
+          {/* <a
             className="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm bg-mywhite text-[#000] font-medium group mt-6 w-fit"
             href="/resume.pdf"
             target="_blank"
@@ -86,7 +86,7 @@ function About() {
             <span>
               <ArrowDownIcon className="w-4" />
             </span>
-          </a>
+          </a> */}
         </div>
       </div>
     </div>
