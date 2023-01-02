@@ -1,12 +1,19 @@
 import React from "react";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
-import furniture from "../assets/WebsiteScreenshots/furniture.png";
-import lights from "../assets/WebsiteScreenshots/lights.png";
-import dining from "../assets/WebsiteScreenshots/dining.png";
-import details from "../assets/WebsiteScreenshots/details.png";
-import productPage from "../assets/WebsiteScreenshots/product-page.png";
-import cart from "../assets/WebsiteScreenshots/cart.png";
-import wallArt from "../assets/WebsiteScreenshots/wallArt.png";
+import {
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  LinkIcon,
+} from "@heroicons/react/24/outline";
+import furniture from "../assets/modernLiving/furniture.png";
+import lights from "../assets/modernLiving/lights.png";
+import dining from "../assets/modernLiving/dining.png";
+import details from "../assets/modernLiving/details.png";
+import productPage from "../assets/modernLiving/product-page.png";
+import cart from "../assets/modernLiving/cart.png";
+import wallArt from "../assets/modernLiving/wallArt.png";
+import crudPage from "../assets/qdiary/crud-page.png";
+import quotePage from "../assets/qdiary/quote-page.png";
+import jobsPage from "../assets/okAviator/jobs-page.png";
 
 const wips = [
   {
@@ -31,7 +38,7 @@ const wips = [
   },
   {
     name: "Ok/Aviator",
-    img: [],
+    img: [jobsPage],
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic beatae fugit nobis fugiat magnam placeat veniam quas eum delectus consequatur",
     shipped: "",
@@ -40,7 +47,7 @@ const wips = [
   },
   {
     name: "Q/Diary",
-    img: [productPage],
+    img: [quotePage, crudPage],
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic beatae fugit nobis fugiat magnam placeat veniam quas eum delectus consequatur",
     shipped: "",
@@ -73,7 +80,12 @@ function Projects() {
             <div className="md:flex space-y-6">
               <h1 className="md:hidden font-bold font-mono text-2xl">
                 <a target="_blank" rel="noreferrer" href={wip.website}>
-                  {wip.name}
+                  <div className="flex items-center gap-2">
+                    {wip.name}
+                    <span>
+                      <LinkIcon className="w-4" />
+                    </span>
+                  </div>
                 </a>
               </h1>
               {/* Carousel */}
@@ -92,10 +104,20 @@ function Projects() {
                   <ChevronRightIcon className="w-4" />
                 </div>
               </div>
-              <div className=" md:w-[50%] md:pl-6 space-y-6 text-greytext">
-                <h1 className="hidden font-bold md:block font-mono text-2xl">
-                  {wip.name}
-                </h1>
+              <div className=" md:w-[50%] md:pl-6 space-y-6">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href={wip.website}
+                  className="hidden font-bold md:block font-mono text-2xl "
+                >
+                  <div className="flex items-center gap-2">
+                    {wip.name}
+                    <span>
+                      <LinkIcon className="w-4" />
+                    </span>
+                  </div>
+                </a>
                 <p className=" text-greytext">{wip.description}</p>
 
                 {/* Shipped Features bullet list */}
