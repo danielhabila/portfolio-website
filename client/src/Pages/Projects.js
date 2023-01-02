@@ -1,11 +1,17 @@
 import React from "react";
-import nodeImg from "../assets/node-js.png";
-import reactImg from "../assets/react-logo.png";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+import furniture from "../assets/WebsiteScreenshots/furniture.png";
+import lights from "../assets/WebsiteScreenshots/lights.png";
+import dining from "../assets/WebsiteScreenshots/dining.png";
+import details from "../assets/WebsiteScreenshots/details.png";
+import productPage from "../assets/WebsiteScreenshots/product-page.png";
+import cart from "../assets/WebsiteScreenshots/cart.png";
+import wallArt from "../assets/WebsiteScreenshots/wallArt.png";
 
 const wips = [
   {
     name: "Modern/Living",
-    img: "",
+    img: [furniture, wallArt, lights, dining, details, productPage, cart],
     description: "This is an e-commerce site inspired by the CB2 website.",
     website: "https://okaviator.com",
     shipped: `
@@ -25,7 +31,7 @@ const wips = [
   },
   {
     name: "Ok/Aviator",
-    img: "",
+    img: [],
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic beatae fugit nobis fugiat magnam placeat veniam quas eum delectus consequatur",
     shipped: "",
@@ -34,7 +40,7 @@ const wips = [
   },
   {
     name: "Q/Diary",
-    img: "",
+    img: [productPage],
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic beatae fugit nobis fugiat magnam placeat veniam quas eum delectus consequatur",
     shipped: "",
@@ -70,28 +76,33 @@ function Projects() {
                   {wip.name}
                 </a>
               </h1>
-              <div className=" mx-auto w-[80%] md:w-[36%] gap-3">
-                <div className="carousel w-fit rounded-xl">
-                  <div className="carousel-item w-full">
-                    <img src={nodeImg} className="w-full" />
-                  </div>
-                  <div className="carousel-item w-full">
-                    <img src={reactImg} className="w-full" />
-                  </div>
+              {/* Carousel */}
+              <div className=" mx-auto md:w-[46%] gap-3">
+                <div className="carousel w-fit h-fit rounded-xl">
+                  {wip.img.map((image) => {
+                    return (
+                      <div className="carousel-item w-full ">
+                        <img src={image} className="w-full" alt="" />
+                      </div>
+                    );
+                  })}
+                </div>
+                <div className="flex space-x-3 justify-center text-greytext mt-2">
+                  <ChevronLeftIcon className="w-4" /> <span>Swipe</span>
+                  <ChevronRightIcon className="w-4" />
                 </div>
               </div>
-              <div className=" md:w-[50%] md:pl-6 space-y-6">
+              <div className=" md:w-[50%] md:pl-6 space-y-6 text-greytext">
                 <h1 className="hidden font-bold md:block font-mono text-2xl">
                   {wip.name}
                 </h1>
-
                 <p className=" text-greytext">{wip.description}</p>
 
                 {/* Shipped Features bullet list */}
                 <div>
                   <h3>Shipped Features</h3>
                   <div
-                    className="text-greytext ml-4"
+                    className="text-greytext ml-5"
                     dangerouslySetInnerHTML={{ __html: wip.shipped }}
                   />
                 </div>
