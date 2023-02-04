@@ -39,7 +39,7 @@ function About() {
 
         <div className="space-y-6 md:w-[50%]">
           <h1 className="hidden md:block md:font-bold md:text-4xl lg:text-5xl">
-            About
+            About me
           </h1>
           <h1 className="text-2xl md:text-3xl font-bold ">
             Welcome to my corner of the internet corner.
