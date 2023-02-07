@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
+import resume from "/resume.pdf";
 import { Link } from "react-scroll";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import {
+  Bars3Icon,
+  XMarkIcon,
+  ArrowDownIcon,
+} from "@heroicons/react/24/outline";
 
 function Navbar() {
   const [nav, setNav] = useState(true);
@@ -23,8 +28,8 @@ function Navbar() {
             d/h
           </Link>
         </div>
-        <div>
-          <ul className=" hidden md:flex justify-center items-center space-x-14 w-fit bg-[#252529] h-10 px-7 rounded-[40px] cursor-pointer text-mywhite ring-[#343438] ring-1">
+        <div className="flex">
+          <ul className=" hidden md:flex justify-center items-center space-x-14 w-fit bg-[#252529] h-10 px-7 rounded-[40px] cursor-pointer text-mywhite ring-[#343438] ring-1 mr-4">
             <Link
               to="about"
               spy={true}
@@ -59,6 +64,18 @@ function Navbar() {
           <div className="md:hidden" onClick={handleNav}>
             <Bars3Icon className="w-8 cursor-pointer" />
           </div>
+
+          {/* RESUME */}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={resume}
+            className="text-[#55d4b6] hover:bg-[#252529] cursor-pointer w-fit h-10 rounded-full hidden md:flex items-center px-4 bg-[#18181B] border-2 border-[#397568]"
+          >
+            {/* Resumé */}
+            CV
+            <ArrowDownIcon className="w-4 ml-1 font-gold" />
+          </a>
         </div>
       </div>
       {/******* Mobile Menu ********/}
@@ -121,6 +138,15 @@ function Navbar() {
               >
                 Contact
               </Link>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="resume.pdf"
+                className="text-[#55d4b6] hover:text-[#5affd8] cursor-pointer flex text-center"
+              >
+                CV
+                <ArrowDownIcon className="w-4 ml-1 font-gold" />
+              </a>
             </ul>
           </div>
         </div>
@@ -130,3 +156,6 @@ function Navbar() {
 }
 
 export default Navbar;
+{
+  /* <a class="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a> */
+}
