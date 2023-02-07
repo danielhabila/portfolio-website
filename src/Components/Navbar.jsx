@@ -141,7 +141,7 @@ function Navbar() {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="resume.pdf"
+                href={resume}
                 className="text-[#55d4b6] hover:text-[#5affd8] cursor-pointer flex text-center"
               >
                 CV
