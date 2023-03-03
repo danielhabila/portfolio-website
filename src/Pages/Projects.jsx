@@ -24,10 +24,16 @@ function Projects() {
       </div>
 
       {/* Mapping projects */}
-      {projectData.map((wip) => {
+      {projectData.map((wip, index) => {
         return (
           <div>
-            <div className="md:flex space-y-6">
+            <div
+              className={` md:flex space-y-6 ${
+                index !== projectData.length - 1
+                  ? "border-b border-[#52525a] md:hidden"
+                  : ""
+              }`}
+            >
               <h1 className="md:hidden font-bold font-mono text-2xl">
                 <a target="_blank" rel="noreferrer" href={wip.website}>
                   <div className="flex items-center gap-2">
