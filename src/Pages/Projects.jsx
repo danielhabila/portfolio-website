@@ -28,9 +28,9 @@ function Projects() {
         return (
           <div>
             <div
-              className={` md:flex space-y-6 ${
+              className={` md:flex space-y-6 md:border-b-0 ${
                 index !== projectData.length - 1
-                  ? "border-b border-[#52525a] md:hidden"
+                  ? "border-b border-[#52525a]"
                   : ""
               }`}
             >
