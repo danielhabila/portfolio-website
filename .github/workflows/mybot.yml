@@ -6,8 +6,8 @@ on:
 
 jobs:
   build:
-    env:
-      CI: false
+    # env:
+    # CI: false
 
     runs-on: self-hosted
 
@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
+          cache-dependency-path: package-lock.json
+
       - run: npm i
       - run: npm run build --if-present
-      # - name: Restart nginx service
-      #   run: sudo service nginx restart

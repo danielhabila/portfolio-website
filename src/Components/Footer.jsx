@@ -8,19 +8,19 @@ function Footer(props) {
   return (
     <footer className="w-full h-22 border-t border-[#52525a] py-3 ">
       <div className="flex justify-center space-x-6 cursor-pointer">
-        <a
+        {/* <a
           target="_blank"
           rel="noreferrer"
           href="https://twitter.com/danielhabila_"
         >
           <GrTwitter size={20} color="#A1A1AA" />
-        </a>
+        </a> */}
         <a
           target="_blank"
           rel="noreferrer"
           href="https://github.com/danielhabila"
         >
-          <GrGithub size={20} color="#A1A1AA" />
+          <GrGithub size={25} color="#A1A1AA" />
         </a>
       </div>
 

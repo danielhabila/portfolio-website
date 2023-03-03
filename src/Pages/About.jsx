@@ -1,13 +1,13 @@
 import React from "react";
 import myFace from "../assets/myFace.png";
-import jsImg from "../assets/js-logo.png";
-import reactImg from "../assets/react-logo.png";
-import nodeImg from "../assets/node-js.png";
-import tailwindImg from "../assets/tailwind-css.png";
-import mongoImg from "../assets/mongodb.png";
-import gitImg from "../assets/git-logo.png";
-import gitHubImg from "../assets/github-logo.png";
-import wpImg from "../assets/wp.png";
+import jsImg from "../assets/icons/js-logo.png";
+import reactImg from "../assets/icons/react-logo.png";
+import nodeImg from "../assets/icons/node-js.png";
+import tailwindImg from "../assets/icons/tailwindcss.png";
+import mongoImg from "../assets/icons/mongodb.png";
+import gitHubImg from "../assets/icons/github-logo.png";
+import nginxImg from "../assets/icons/nginx.png";
+import cloudinaryLogo from "../assets/icons/cloudinaryLogo.png";
 
 function About() {
   const technologies = [
@@ -16,9 +16,9 @@ function About() {
     { name: "Node.js", img: nodeImg },
     { name: "Tailwind CSS", img: tailwindImg },
     { name: "MongoDB", img: mongoImg },
-    { name: "Git", img: gitImg },
     { name: "Github", img: gitHubImg },
-    { name: "Wordpress", img: wpImg },
+    { name: "Nginx", img: nginxImg },
+    { name: "Cloudinary", img: cloudinaryLogo },
   ];
   return (
     <div className="py-20 lg:pt-10 lg:pb-20">
@@ -45,12 +45,12 @@ function About() {
             Welcome to my corner of the internet corner.
           </h1>
           <p className="text-[#A1A1AA]">
-            I’m Daniel, I love building intuitive and visually appealing web
-            applications. I am a self-taught web developer with 1 year+
-            experience working with technologies such as JavaScript, React,
-            Node, and Tailwind CSS. I have a background in aerospace
-            engineering, but my true passion lies in technology and programming.
-            In my free time, I enjoy reading, flying and chatting about new
+            I am Daniel, and I love building intuitive and visually appealing
+            web applications. As a self-taught web developer, I have been
+            writing code for two years and working with technologies such as
+            JavaScript, React, Node, and Tailwind CSS. While my background is in
+            aerospace engineering, my true passion lies in tech and programming.
+            In my free time, I enjoy reading, flying, and discussing new
             developments in the tech industry.
           </p>
 
@@ -62,9 +62,9 @@ function About() {
             {technologies.map((tech) => {
               return (
                 <div className="flex items-center space-x-4">
-                  <div className="p-[0.3rem] bg-[#27272A] w-fit rounded-full">
+                  <div className="p-[0.3rem] bg-[#27272A] w-fit rounded-full ring-1 ring-[#343438]">
                     <img
-                      className="rounded-full ring-0 h-6 w-6"
+                      className="rounded-full  h-6 w-6"
                       src={tech.img}
                       alt=""
                     />
@@ -74,18 +74,6 @@ function About() {
               );
             })}
           </div>
-          {/* Download CV */}
-          {/* <a
-            className="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm bg-mywhite text-[#000] font-medium group mt-6 w-fit"
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Download CV
-            <span>
-              <ArrowDownIcon className="w-4" />
-            </span>
-          </a> */}
         </div>
       </div>
     </div>
