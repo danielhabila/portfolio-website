@@ -11,6 +11,7 @@ import joblist1 from "../assets/okAviator/joblist1.png";
 import joblist2 from "../assets/okAviator/joblist2.png";
 import postjob1 from "../assets/okAviator/postjob1.png";
 import postjob2 from "../assets/okAviator/postjob2.png";
+import stripecheckout from "../assets/okAviator/stripecheckout.png";
 
 import home1 from "../assets/abstractAi/home1.png";
 import home2 from "../assets/abstractAi/home2.jpg";
@@ -41,9 +42,9 @@ const projectData = [
   },
   {
     name: "Ok/Aviator",
-    img: [joblist1, description, joblist2, postjob1, postjob2],
+    img: [joblist1, description, joblist2, postjob1, postjob2, stripecheckout],
     description:
-      "Ok Aviator is a project i'm building dedicated to helping professionals in the aviation industry find employment opportunities and helping companies in the industry find qualified candidates. I’m building this to make the process of finding the right job or employee easier and more efficient for both job seekers and employers. ",
+      "Ok Aviator is a job-board app dedicated to helping professionals in the aviation industry find employment opportunities and helping companies in the industry find qualified candidates. I’m building this to make the process of finding the right job or employee easier and more efficient for both job seekers and employers. ",
     website: "https://okaviator.com",
     shipped: `
         <ul style="list-style-type: disc">

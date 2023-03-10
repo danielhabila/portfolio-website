@@ -36,7 +36,7 @@ function Navbar() {
               smooth={true}
               offset={-200}
               duration={500}
-              className="block hover:text-gold"
+              className="block hover:text-[#55d4b6]"
             >
               About
             </Link>
@@ -46,7 +46,7 @@ function Navbar() {
               smooth={true}
               offset={-50}
               duration={500}
-              className="block hover:text-gold"
+              className="block hover:text-[#55d4b6]"
             >
               Projects
             </Link>
@@ -56,7 +56,7 @@ function Navbar() {
               smooth={true}
               offset={50}
               duration={500}
-              className="block hover:text-gold"
+              className="block hover:text-[#55d4b6]"
             >
               Contact
             </Link>
@@ -112,7 +112,7 @@ function Navbar() {
                 offset={-200}
                 duration={500}
                 onClick={handleNav}
-                className=" hover:text-gold cursor-pointer"
+                className=" hover:text-[#55d4b6] cursor-pointer"
               >
                 About
               </Link>
@@ -123,7 +123,7 @@ function Navbar() {
                 offset={-40}
                 duration={500}
                 onClick={handleNav}
-                className="hover:text-gold cursor-pointer"
+                className="hover:text-[#55d4b6] cursor-pointer"
               >
                 Projects
               </Link>
@@ -134,7 +134,7 @@ function Navbar() {
                 offset={50}
                 duration={500}
                 onClick={handleNav}
-                className="hover:text-gold cursor-pointer"
+                className="hover:text-[#55d4b6] cursor-pointer"
               >
                 Contact
               </Link>

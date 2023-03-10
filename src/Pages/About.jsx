@@ -7,7 +7,7 @@ import tailwindImg from "../assets/icons/tailwindcss.png";
 import mongoImg from "../assets/icons/mongodb.png";
 import gitHubImg from "../assets/icons/github-logo.png";
 import nginxImg from "../assets/icons/nginx.png";
-import cloudinaryLogo from "../assets/icons/cloudinaryLogo.png";
+import wordpressLogo from "../assets/icons/wp.png";
 
 function About() {
   const technologies = [
@@ -18,7 +18,7 @@ function About() {
     { name: "MongoDB", img: mongoImg },
     { name: "Github", img: gitHubImg },
     { name: "Nginx", img: nginxImg },
-    { name: "Cloudinary", img: cloudinaryLogo },
+    { name: "Wordpress", img: wordpressLogo },
   ];
   return (
     <div className="py-20 lg:pt-10 lg:pb-20">
