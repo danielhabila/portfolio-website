@@ -82,7 +82,6 @@ const projectData = [
       <ul style="list-style-type: disc">
         <li>Integrating Stripe payment</li>
         <li>User Login and Authentication</li>
-        <li>Adding data and functionality to Dining, Wall Art, Lighting </li>
       </ul>
     `,
   },
