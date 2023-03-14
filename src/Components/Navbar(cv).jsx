@@ -64,6 +64,18 @@ function Navbar() {
           <div className="md:hidden" onClick={handleNav}>
             <Bars3Icon className="w-8 cursor-pointer" />
           </div>
+
+          {/* RESUME */}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={resume}
+            className="text-[#55d4b6] hover:bg-[#252529] cursor-pointer w-fit h-10 rounded-full hidden md:flex items-center px-4 bg-[#18181B] border-2 border-[#397568]"
+          >
+            {/* Resumé */}
+            CV
+            <ArrowDownIcon className="w-4 ml-1 font-gold" />
+          </a>
         </div>
       </div>
       {/******* Mobile Menu ********/}
@@ -126,6 +138,15 @@ function Navbar() {
               >
                 Contact
               </Link>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={resume}
+                className="text-[#55d4b6] hover:text-[#5affd8] cursor-pointer flex text-center"
+              >
+                CV
+                <ArrowDownIcon className="w-4 ml-1 font-gold" />
+              </a>
             </ul>
           </div>
         </div>
