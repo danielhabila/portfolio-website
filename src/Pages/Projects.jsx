@@ -5,6 +5,7 @@ import {
   LinkIcon,
 } from "@heroicons/react/24/outline";
 import projectData from "../constant/projectData";
+import { VscGlobe, VscGithub } from "react-icons/vsc";
 
 function Projects() {
   return (
@@ -35,14 +36,24 @@ function Projects() {
               }`}
             >
               <h1 className="md:hidden font-bold font-mono text-2xl">
-                <a target="_blank" rel="noreferrer" href={wip.website}>
-                  <div className="flex items-center gap-2">
-                    {wip.name}
-                    <span>
-                      <LinkIcon className="w-4" />
-                    </span>
-                  </div>
-                </a>
+                <div className="flex justify-center items-center space-x-4">
+                  <a target="_blank" rel="noreferrer" href={wip.website}>
+                    <div className="flex items-center gap-4">
+                      {wip.name}
+                      <span>
+                        <VscGlobe size={20} />
+                      </span>
+                    </div>
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    className=" "
+                    href={wip.ghLink}
+                  >
+                    <VscGithub size={18} />
+                  </a>
+                </div>
               </h1>
               {/* Carousel */}
               <div className=" mx-auto md:w-[46%] gap-3">
@@ -61,19 +72,29 @@ function Projects() {
                 </div>
               </div>
               <div className=" md:w-[50%] md:pl-6 space-y-6">
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  href={wip.website}
-                  className="hidden font-bold md:block font-mono text-2xl "
-                >
-                  <div className="flex items-center gap-2">
-                    {wip.name}
-                    <span>
-                      <LinkIcon className="w-4" />
-                    </span>
-                  </div>
-                </a>
+                <div className="flex items-center space-x-4">
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href={wip.website}
+                    className="hidden font-bold md:block font-mono text-2xl "
+                  >
+                    <div className="flex justify-center items-center gap-2">
+                      {wip.name}
+                      <span>
+                        <VscGlobe size={20} />
+                      </span>
+                    </div>
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hidden font-bold md:block font-mono text-2xl "
+                    href={wip.ghLink}
+                  >
+                    <VscGithub size={18} />
+                  </a>
+                </div>
                 <p className=" text-greytext">{wip.description}</p>
 
                 {/* Shipped Features bullet list */}
