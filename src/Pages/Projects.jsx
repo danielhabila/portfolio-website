@@ -19,8 +19,8 @@ function Projects() {
         </h1>
         <p className="text-gray-400 text-greytext leading-7 ">
           Here are projects I've worked on recently, I update them regularly.
-          I’ve worked on a number of projects over the past year, but these are
-          the ones that I’m focused on at the moment.
+          I’ve worked on a number of projects over the past couple years, here
+          are 3 I would like to highlight.
         </p>
       </div>
 

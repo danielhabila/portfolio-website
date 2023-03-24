@@ -45,13 +45,13 @@ function About() {
             Welcome to my corner of the internet corner.
           </h1>
           <p className="text-[#A1A1AA]">
-            I am Daniel, and I love building intuitive and visually appealing
-            web applications. As a self-taught web developer, I have been
-            writing code for two years and working with technologies such as
-            JavaScript, React, Node, and Tailwind CSS. While my background is in
-            aerospace engineering, my true passion lies in tech and programming.
-            In my free time, I enjoy reading, flying, and discussing new
-            developments in the tech industry.
+            Hey there👋🏾 I'm Daniel. I am a web developer who loves building
+            intuitive and visually appealing web applications. I work with
+            technologies like JavaScript, React, Node, Tailwind CSS to name a
+            few. While my background is in aerospace engineering, my tech-savvy
+            mind pushed me into learning to code and quickly realised that my
+            true passion lies in programming. In my free time, I love to read,
+            go flying, and discussing new developments in the tech industry.
           </p>
 
           <p className="text-[#A1A1AA]">

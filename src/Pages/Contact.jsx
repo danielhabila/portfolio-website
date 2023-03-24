@@ -9,7 +9,7 @@ function Contact() {
     >
       <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl">Contact</h1>
       <p className="text-[#A1A1AA] ">
-        Send me a message, my ravens always find their way home.
+        Send me a message, my pigeons always find their way home :){" "}
       </p>
       <a
         href="mailto:dann.aviates@gmail.com"
