@@ -5,7 +5,7 @@ import reactImg from "../assets/icons/react-logo.png";
 import nodeImg from "../assets/icons/node-js.png";
 import tailwindImg from "../assets/icons/tailwindcss.png";
 import mongoImg from "../assets/icons/mongodb.png";
-import gitHubImg from "../assets/icons/github-logo.png";
+import redis from "../assets/icons/redis.png";
 import nginxImg from "../assets/icons/nginx.png";
 import wordpressLogo from "../assets/icons/wp.png";
 
@@ -16,7 +16,7 @@ function About() {
     { name: "Node.js", img: nodeImg },
     { name: "Tailwind CSS", img: tailwindImg },
     { name: "MongoDB", img: mongoImg },
-    { name: "Github", img: gitHubImg },
+    { name: "Redis", img: redis },
     { name: "Nginx", img: nginxImg },
     { name: "Wordpress", img: wordpressLogo },
   ];
